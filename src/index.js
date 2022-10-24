@@ -46,7 +46,7 @@ formEl.addEventListener('submit', event => {
   galleryEl.innerHTML = '';
   page = 1;
   btnLoadMoreEl.classList.add('invisible');
-  q = event.target.elements.searchQuery.value;
+  q = event.target.elements.searchQuery.value.trim();
   if (q !== '') {
     fetchPhotos(page, q)
       .then(data => {
